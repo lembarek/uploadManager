@@ -43,7 +43,7 @@ class UploadController extends Controller
           ->withSuccess("Folder '$new_folder' created.");
     }
 
-    $error = $result ? : trans('uploadManager.uploadManager.error_when_creating_directory');
+    $error = $result ? : trans('uploadManager::uploadManager.error_when_creating_directory');
     return redirect()
         ->back()
         ->withErrors([$error]);

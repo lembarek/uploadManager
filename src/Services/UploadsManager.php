@@ -12,7 +12,7 @@ class UploadsManager
 
   public function __construct(PhpRepository $mimeDetect)
   {
-    $this->disk = Storage::disk(config('uploadManager::uploadManager.storage'));
+    $this->disk = Storage::disk(config('uploadManager.storage'));
     $this->mimeDetect = $mimeDetect;
   }
 
@@ -41,6 +41,7 @@ class UploadsManager
     foreach (array_unique($this->disk->directories($folder)) as $subfolder) {
       $subfolders["/$subfolder"] = basename($subfolder);
     }
+
 
     $files = [];
     foreach ($this->disk->files($folder) as $path) {
@@ -108,7 +109,7 @@ class UploadsManager
    */
   public function fileWebpath($path)
   {
-    $path = rtrim(config('uploadManager::uploadManager.webpath'), '/') . '/' .
+    $path = rtrim(config('uploadManager.webpath'), '/') . '/' .
         ltrim($path, '/');
     return url($path);
   }
