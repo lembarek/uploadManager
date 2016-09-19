@@ -34,4 +34,6 @@ return [
     "optional_filename" => "optional filename",
     "please_confirm" => "please confirm",
     "upload_new_file" => "upload new file",
+    "previewwwwww" => "previewwwwww",
+    "preview" => "preview",
 ];

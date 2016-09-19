@@ -23,8 +23,8 @@
       </button>
       @if (is_image($file['mimeType']))
         <button type="button" class="btn btn-xs btn-success"
-                onclick="preview_image('{{ $file['webPath'] }}')">
-                id="delete_button_for_{{$file['name']}}_file"
+                onclick="preview_image('{{ $file['webPath'] }}')"
+                id="delete_button_for_{{$file['name']}}_file">
           <i class="fa fa-eye fa-lg"></i>
           {{ trans('uploadManager::uploadManager.preview') }}
         </button>

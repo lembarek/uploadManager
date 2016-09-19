@@ -1,1 +1,1 @@
-@extends('core::layout.master')
+@extends('admin::layout.master')
