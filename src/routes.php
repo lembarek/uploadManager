@@ -2,7 +2,7 @@
 
 Route::group([
     'as' => 'uploadManager::',
-    'middleware' => ['web'],
+    'middleware' => ['web', 'auth'],
     'namespace' => 'Lembarek\UploadManager\Controllers',
     'prefix' => 'dashboard',
 ], function () {
