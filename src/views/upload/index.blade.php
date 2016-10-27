@@ -68,7 +68,7 @@
 
 @stop
 
-@section('script')
+@section('scripts')
   <script>
 
     // Confirm file delete
